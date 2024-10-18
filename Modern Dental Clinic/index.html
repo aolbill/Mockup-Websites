@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Dental Clinic offers professional dental care including teeth cleaning, implants, and whitening. Book an appointment today for a healthier smile.">
+    <title>Modern Dental Clinic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>Modern Dental Clinic</h1>
+        </div>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#appointment">Book Appointment</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Your Smile, Our Priority</h1>
+            <p>Book an appointment with our experienced dentists today!</p>
+            <button class="cta-btn" onclick="document.getElementById('appointment').scrollIntoView({ behavior: 'smooth' })">Book Now</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>At Modern Dental Clinic, we are dedicated to providing high-quality dental care with a personalized touch. Our team of experts uses the latest dental technologies to ensure that every patient walks away with a smile. From regular cleanings to complex dental surgeries, our goal is to make your experience comfortable and positive.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service-item" style="background-image: url('https://images.pexels.com/photos/3845652/pexels-photo-3845652.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                <div class="overlay">
+                    <h3>Teeth Cleaning</h3>
+                    <p>Keep your smile healthy and bright with our professional cleaning services.</p>
+                </div>
+            </div>
+            <div class="service-item" style="background-image: url('https://images.pexels.com/photos/3845654/pexels-photo-3845654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                <div class="overlay">
+                    <h3>Dental Implants</h3>
+                    <p>Restore your smile with our top-tier dental implant services that blend seamlessly.</p>
+                </div>
+            </div>
+            <div class="service-item" style="background-image: url('https://images.pexels.com/photos/4270367/pexels-photo-4270367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
+                <div class="overlay">
+                    <h3>Teeth Whitening</h3>
+                    <p>Brighten your smile with our safe and effective whitening treatments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section -->
+    <section id="appointment" class="section appointment-section">
+        <h2>Book an Appointment</h2>
+        <form class="appointment-form" id="appointmentForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter Full Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter Phone Number" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" required>
+                    <option value="">Select Service</option>
+                    <option value="Teeth Cleaning">Teeth Cleaning</option>
+                    <option value="Dental Implants">Dental Implants</option>
+                    <option value="Teeth Whitening">Teeth Whitening</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="appointmentDate">Appointment Date</label>
+                <input type="date" id="appointmentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="appointmentTime">Appointment Time</label>
+                <input type="time" id="appointmentTime" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Information</label>
+                <textarea id="message" placeholder="Additional Information"></textarea>
+            </div>
+            <button type="submit" class="cta-btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Modern Dental Clinic</h1>
+                <p>Delivering smiles with the highest quality care.</p>
+            </div>
+            <div class="footer-social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <p>© 2024 Modern Dental Clinic. All rights reserved.</p>
+        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="back-to-top-btn">↑ Back to Top</button>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open');
+        }
+    </script>
+
+</body>
+
+</html>
